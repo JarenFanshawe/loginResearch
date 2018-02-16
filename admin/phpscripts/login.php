@@ -24,6 +24,15 @@
 
 			redirect_to("admin_index.php");
 		}else{
+			$errorLogin = "SELECT * FROM tbl_user WHERE user_name ='{$username}'";
+			$errorLoginQuery = mysqli_query($link, $errorLogin);
+
+			$errorUser = mysqli_fetch_array($errorLoginQuery, MYSQLI_ASSOC);
+
+			$attempts = $errorUser['user_lock'];
+			$attemptsCount = ++$attempts;
+			$updateLock = "UPDATE tbl_user SET user_lock = '{$attemptsCount}' WHERE user_name = '{$username}'";
+
 			$message = "Looks like you missed something. Try again!";
 			return $message;
 		}

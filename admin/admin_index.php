@@ -10,28 +10,21 @@
 	$founduser = mysqli_fetch_array($user_set, MYSQLI_ASSOC);
 	$date = $founduser['user_date'];
 
-	//Change the messages to what you want.
 	$afternoon = "Almost quitting time! ";
 	$evening = "Time to head home! ";
 	$late = "Sleep tight! ";
 	$moring = "Get to work! ";
 
+	date_default_timezone_set('America/Toronto');
 	$current_time = date(G);
 
-	//12 p.m. - 4 p.m.
 	if ($current_time >= 12 && $current_time <= 16) {
 	echo $afternoon;
-	}
-	// 5 p.m. to 11 p.m.
-	elseif ($current_time >= 17 && $current_time <= 24) {
+	}elseif ($current_time >= 17 && $current_time <= 24) {
 	echo $evening;
-	}
-	//12 a.m. - 5 a.m.
-	elseif ($current_time >= 1 && $current_time <= 5) {
+	}elseif ($current_time >= 1 && $current_time <= 5) {
 	echo $late;
-	}
-	// 6 a.m. to 11 a.m.
-	elseif ($current_time >= 6 && $current_time <= 11) {
+	}elseif ($current_time >= 6 && $current_time <= 11) {
 	echo $morning;
 	}
 ?>
