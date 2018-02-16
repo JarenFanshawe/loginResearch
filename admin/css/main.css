@@ -1,0 +1,159 @@
+/*Variables*/
+/*Colors*/
+/*Fonts*/
+/*Mixins*/
+/*Gradient - Vertical*/
+/*Gradient - Horizontal*/
+/*Transition*/
+/*Animation Keyframes*/
+/*Fade and Slide Down*/
+/*Overall Selectors*/
+#loginBody {
+  background: #f7bf18;
+  background: -moz-linear-gradient(left, #f7bf18 0%, #f69c1d 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #f7bf18), color-stop(100%, #f69c1d));
+  background: -webkit-linear-gradient(left, #f7bf18 0%, #f69c1d 100%);
+  background: -o-linear-gradient(left, #f7bf18 0%, #f69c1d 100%);
+  background: -ms-linear-gradient(left, #f7bf18 0%, #f69c1d 100%);
+  background: linear-gradient(to right, #f7bf18 0%, #f69c1d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7bf18', endColorstr='#f69c1d', GradientType=1 ); }
+
+body {
+  background-color: #FFF;
+  color: #111111;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px; }
+
+::-moz-selection {
+  background: #fbe193; }
+
+::selection {
+  background: #fbe193; }
+
+.fullWidth {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial; }
+
+h2 {
+  color: #FFF;
+  font-size: 1.8em; }
+
+button {
+  background: #f7bf18;
+  background: -moz-linear-gradient(left, #f7bf18 0%, #f69c1d 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #f7bf18), color-stop(100%, #f69c1d));
+  background: -webkit-linear-gradient(left, #f7bf18 0%, #f69c1d 100%);
+  background: -o-linear-gradient(left, #f7bf18 0%, #f69c1d 100%);
+  background: -ms-linear-gradient(left, #f7bf18 0%, #f69c1d 100%);
+  background: linear-gradient(to right, #f7bf18 0%, #f69c1d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7bf18', endColorstr='#f69c1d', GradientType=1 );
+  border-radius: 200px;
+  width: 100%;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+button:hover {
+  opacity: .75; }
+
+.whiteBut {
+  background: none;
+  background-color: #FFF;
+  color: #111F42; }
+
+.whiteBut:hover {
+  background-color: #FFF;
+  color: #111F42; }
+
+input {
+  background-color: #FFF;
+  border-radius: 200px;
+  box-shadow: none;
+  border: solid 1px #F7BF18;
+  padding-left: 15px; }
+
+a {
+  color: #111F42; }
+
+a:hover {
+  color: #F7BF18; }
+
+.hide {
+  display: none; }
+
+/*Login Page*/
+#loginCon {
+  padding: 80px 40px 0 40px; }
+  #loginCon h2 {
+    font-size: 2em; }
+  #loginCon form {
+    margin-top: 40px; }
+  #loginCon label {
+    color: #FFF;
+    font-family: "Open Sans", sans-serif;
+    font-size: .875em;
+    margin-top: 20px;
+    cursor: text; }
+  #loginCon input {
+    margin-top: 8px; }
+  #loginCon #radioText {
+    font-family: "Open Sans", sans-serif;
+    font-size: .875em;
+    margin-left: 10px;
+    color: #FFF; }
+  #loginCon .inputForm {
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #9f9fb4; }
+  #loginCon .loginButton {
+    text-align: center;
+    padding: 10px;
+    width: 45%;
+    margin-right: 17px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #bcbccb;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -ms-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out; }
+  #loginCon #loginButton {
+    border: 1px solid #FFF;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0); }
+  #loginCon #signupButton {
+    border: 1px solid transparent;
+    color: #111111;
+    margin-right: 0px; }
+
+/*Index Page*/
+#profileCon {
+  padding: 40px 7% 0 7%; }
+  #profileCon #profileImg {
+    font-size: 8em;
+    color: #111F42; }
+  #profileCon #profileTitle {
+    padding-top: 60px;
+    font-family: "Muli", sans-serif;
+    text-align: right; }
+    #profileCon #profileTitle h3 {
+      font-size: 2.25em;
+      color: #F7BF18;
+      margin-bottom: 0; }
+    #profileCon #profileTitle h4 {
+      font-size: 1em;
+      color: #111F42; }
+
+@media screen and (min-width: 640px) {
+  #loginCon {
+    padding-left: 30%;
+    padding-right: 30%; } }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,255 @@
+/*Variables*/
+
+/*Colors*/
+$yellow : #F7BF18;
+$orange : #F69C1D;
+$navy : #111F42;
+$black : #111111;
+$graydark : #5D5D77;
+$graylight : #CBCCCF;
+$white : #FFF;
+
+
+/*Fonts*/
+$fontHeader: 'Muli', sans-serif;
+$fontBody: 'Open Sans', sans-serif;
+
+
+/*Mixins*/
+
+/*Gradient - Vertical*/
+@mixin gradY() {
+  background: rgba(247,191,24,1);
+background: -moz-linear-gradient(top, rgba(247,191,24,1) 0%, rgba(246,156,29,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(247,191,24,1)), color-stop(100%, rgba(246,156,29,1)));
+background: -webkit-linear-gradient(top, rgba(247,191,24,1) 0%, rgba(246,156,29,1) 100%);
+background: -o-linear-gradient(top, rgba(247,191,24,1) 0%, rgba(246,156,29,1) 100%);
+background: -ms-linear-gradient(top, rgba(247,191,24,1) 0%, rgba(246,156,29,1) 100%);
+background: linear-gradient(to bottom, rgba(247,191,24,1) 0%, rgba(246,156,29,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7bf18', endColorstr='#f69c1d', GradientType=0 );
+}
+//#div { @include gradY(); }
+
+/*Gradient - Horizontal*/
+@mixin gradX() {
+  background: rgba(247,191,24,1);
+  background: -moz-linear-gradient(left, rgba(247,191,24,1) 0%, rgba(246,156,29,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(247,191,24,1)), color-stop(100%, rgba(246,156,29,1)));
+  background: -webkit-linear-gradient(left, rgba(247,191,24,1) 0%, rgba(246,156,29,1) 100%);
+  background: -o-linear-gradient(left, rgba(247,191,24,1) 0%, rgba(246,156,29,1) 100%);
+  background: -ms-linear-gradient(left, rgba(247,191,24,1) 0%, rgba(246,156,29,1) 100%);
+  background: linear-gradient(to right, rgba(247,191,24,1) 0%, rgba(246,156,29,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7bf18', endColorstr='#f69c1d', GradientType=1 );
+}
+
+//#div { @include gradX(); }
+
+/*Transition*/
+@mixin trans($type, $time) {
+  -webkit-transition: $type $time ease-in-out;
+  -moz-transition: $type $time ease-in-out;
+  -ms-transition: $type $time ease-in-out;
+  -o-transition: $type $time ease-in-out;
+  transition: $type $time ease-in-out;
+}
+//#div { @include trans(all, .2s); }
+
+
+/*Animation Keyframes*/
+
+/*Fade and Slide Down*/
+@mixin fadeSlide() {
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, -60%, 0);
+      transform: translate3d(0, -60%, 0);
+    }
+  }
+}
+//#div { @include fadeSlide(); }
+
+
+/*Overall Selectors*/
+
+
+#loginBody {
+	@include gradX();
+}
+
+body {
+  	background-color: $white;
+	color: $black;
+	font-family: $fontBody;
+  	font-size: 16px;
+}
+
+::-moz-selection { background: lighten($yellow, 25%); }
+::selection { background: lighten($yellow, 25%); }
+
+.fullWidth {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: initial;
+}
+
+h2 {
+  	color: $white;
+ 	font-size: 1.8em;
+}
+
+button {
+  	@include gradX();
+  	border-radius: 200px;
+ 	width: 100%;
+ 	@include trans(all, .2s);
+}
+
+button:hover {
+  	opacity: .75;
+}
+
+.whiteBut {
+  	background: none;
+  	background-color: $white;
+  	color: $navy;
+}
+
+.whiteBut:hover {
+  background-color: $white;
+  color: $navy;
+}
+
+input {
+  background-color: $white;
+  border-radius: 200px;
+  box-shadow: none;
+  border: solid 1px $yellow;
+  padding-left: 15px;
+}
+
+a {
+  color: $navy;
+}
+
+a:hover {
+  color: $yellow;
+}
+
+.hide {
+	display: none;
+}
+
+
+/*Login Page*/
+
+#loginCon {
+	padding: 80px 40px 0 40px;
+
+	h2 {
+		font-size: 2em;
+	}
+
+	form {
+		margin-top: 40px;
+	}
+
+	label {
+		color: $white;
+		font-family: $fontBody;
+		font-size: .875em;
+		margin-top: 20px;
+		cursor: text;
+	}
+
+	input {
+		margin-top: 8px;
+	}
+
+	#radioText {
+		font-family: $fontBody;
+		font-size: .875em;
+		margin-left: 10px;
+		color: $white;
+	}
+
+	.inputForm {
+		border-radius: 50px;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		box-shadow: 2px 2px 2px lighten($graydark, 25%);
+	}
+
+	.loginButton {
+		text-align: center;
+		padding: 10px;
+		width: 45%;
+		margin-right: 17px;
+		border-radius: 50px;
+		cursor: pointer;
+		box-shadow: 2px 2px 2px lighten($graydark, 35%);
+		@include trans(all, .15s);
+	}
+
+	#loginButton {
+		border: 1px solid $white;
+		color: $white;
+		background-color: rgba(0,0,0,0);
+	}
+
+	#signupButton {
+		border: 1px solid transparent;
+		color: $black;
+		margin-right: 0px;
+	}
+}
+
+
+/*Index Page*/
+
+
+#profileCon {
+	padding: 40px 7% 0 7%;
+
+	#profileImg {
+		font-size: 8em;
+		color: $navy;
+	}
+
+	#profileTitle {
+		padding-top: 60px;
+		font-family: $fontHeader;
+		text-align: right;
+
+		h3 {
+			font-size: 2.25em;
+			color: $yellow;
+			margin-bottom: 0;
+		}
+
+		h4 {
+			font-size: 1em;
+			color: $navy;
+
+		}
+	}
+}
+
+
+
+@media screen and (min-width: 640px) {
+
+	#loginCon {
+		padding-left: 30%;
+		padding-right: 30%;
+	}
+
+}
